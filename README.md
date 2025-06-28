@@ -69,6 +69,15 @@ All metrics (precision, recall, F1-score) were 1.00 for both classes.
 - Classification report
 - Sample prediction: `Passenger did not survive.`
 
+### 📊 Correlation Heatmap
+This heatmap visualizes the correlation between input features and the target variable (Survived).
+
+Notably:
+- `Fare`, `Parch`, and `Embarked_Q` show a **positive correlation** with survival.
+- `Pclass` and `Sex_male` are **negatively correlated** with survival.
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
 ---
 
 ## 📚 Key Learnings

@@ -1,74 +1,128 @@
-# 🛳 Titanic Survival Prediction | Logistic Regression with Scikit‑learn
+# 🚢 Titanic Survival Prediction | Logistic Regression | 100% Accuracy
 
-Predicting passenger survival on the Titanic using logistic regression. This project covers data cleaning, feature engineering, model training, evaluation, and result interpretation using Python and Scikit‑learn.
+This project predicts passenger survival on the Titanic using a Logistic Regression model. It showcases full ML pipeline steps: data preprocessing, visualization, training, evaluation, and prediction using Python and Scikit-learn.
 
 ---
 
 ## 📊 Dataset
-- **Source**: Kaggle *“Titanic – Machine Learning from Disaster”*
-- **Train Data**: 891 passengers with survival response
-- **Test Data**: 418 passengers (without labels)
-- **Key Features**: Pclass, Sex, Age, SibSp, Parch, Fare, Embarked
+- **Source**: Titanic dataset (test.csv format)
+- **Records**: 418 (subset used for testing)
+- **Target Variable**: `Survived` (0 = No, 1 = Yes)
+- **Selected Features**:
+  - Pclass
+  - Sex
+  - Age
+  - SibSp
+  - Parch
+  - Fare
+  - Embarked
 
 ---
 
-## 🔧 Technologies & Libraries
+## 🔧 Technologies Used
 - Python 3
-- Pandas, NumPy
+- Pandas
+- NumPy
 - Scikit-learn
-- Seaborn & Matplotlib
+- Seaborn
+- Matplotlib
 
 ---
 
-## 🧠 Approach & Pipeline
-1. **Data Preprocessing**  
-   - Dropped irrelevant columns (Cabin, Ticket, Name, etc.)  
-   - Imputed missing values (mean Age, most common Embarked)  
-   - Encoded categorical features (`Sex`, `Embarked`) using one-hot encoding  
-   - Standardized numeric features (Age, Fare) using StandardScaler
-
-2. **Model Building**  
-   - Split into train/test sets (80/20)  
-   - Trained `LogisticRegression` model  
-   - Visualized model coefficients for feature importance
-
-3. **Evaluation**  
-   - Obtained training and test accuracy (~82.8% / ~76.2%)  
-   - Generated classification report and confusion matrix  
-   - Analyzed misclassification and feature impact
+## 🧹 Data Preprocessing
+- Handled missing values in Age and Embarked
+- Encoded `Sex` and `Embarked` using LabelEncoder
+- Visualized feature relationships with correlation heatmap
+- Normalized features and performed train-test split
 
 ---
 
-## 📈 Results
+## 🤖 Model Used
+- ✅ Logistic Regression (`sklearn.linear_model.LogisticRegression()`)
 
-| Metric               | Value       |
-|----------------------|-------------|
-| Training Accuracy    | ~82.8%      |
-| Test Accuracy        | ~76.2%      |
+---
 
-📌 **Insight**: Logistic regression effectively predicts survival based on Sex, Pclass, Age, and SibSp. Significant coefficients confirm historical survival trends.
+## 📈 Evaluation Metrics
+
+### ✅ Accuracy: `100%`  
+Model perfectly classified all 84 test samples.
+
+### 📊 Confusion Matrix
+```
+[[50  0]
+ [ 0 34]]
+```
+
+### 🧾 Classification Report
+All metrics (precision, recall, F1-score) were 1.00 for both classes.
+
+### 🔁 Cross-Validation
+- Scores: [1.0, 1.0, 1.0, 1.0, 1.0]  
+- **Mean CV Accuracy**: `1.0`
+
+---
+
+## 📸 Visual Outputs
+
+- Confusion matrix plot
+- Correlation heatmap for feature analysis
+- Classification report
+- Sample prediction: `Passenger did not survive.`
 
 ---
 
 ## 📚 Key Learnings
-- Handling missing data and categorical features  
-- Importance of feature scaling for logistic regression  
-- Model evaluation using classification metrics  
-- Interpreting feature importance from model coefficients
+- Applied end-to-end supervised classification
+- Handled categorical encoding and missing values
+- Used logistic regression for binary classification
+- Understood evaluation using confusion matrix and CV
 
 ---
 
-## 🧩 File Structure
+## 📂 File Structure
 
-├── Titanic_Survived__Prediction.ipynb # Main Jupyter notebook
-├── images/ # (Optional) EDA & evaluation plots
-│ └── confusion_matrix.png
-├── README.md # This documentation
+```
+├── Titanic_Survived__Prediction.ipynb  # Main notebook
+├── titanic.csv.xlsx                    # Dataset file
+├── images/
+│   ├── titanic_confusion_matrix.png
+│   └── titanic_heatmap.png
+├── README.md
+```
 
 ---
 
 ## ⚙️ How to Run
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/shivamjha-9/titanic-logistic-model.git
 
+1. Clone this repository:
+```bash
+git clone https://github.com/shivamjha-9/titanic-logistic-model.git
+```
+
+2. Open notebook in [Google Colab](https://colab.research.google.com/) or Jupyter
+
+3. Run all cells to see data processing, modeling, and prediction
+
+---
+
+## 🔗 Project Link
+[👉 View on GitHub](https://github.com/shivamjha-9/titanic-logistic-model)
+
+---
+
+## 👤 Author
+
+**Shivam Kumar Jha**  
+🎓 B.Tech CSE | GEC Samastipur (Batch of 2027)  
+🔗 [LinkedIn](https://www.linkedin.com/in/shivam-jha-a80825291)  
+🐙 [GitHub](https://github.com/shivamjha-9)
+
+---
+
+## 📌 Status
+✅ Project Completed — Achieved 100% accuracy
+
+---
+
+## 📝 License
+This project is open-source and available under the [MIT License](LICENSE).

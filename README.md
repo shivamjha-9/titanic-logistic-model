@@ -30,9 +30,9 @@ This project predicts passenger survival on the Titanic using a Logistic Regress
 ---
 
 ## 🧹 Data Preprocessing
-- Handled missing values in Age and Embarked
+- Handled missing values in `Age` and `Embarked`
 - Encoded `Sex` and `Embarked` using LabelEncoder
-- Visualized feature relationships with correlation heatmap
+- Visualized feature relationships with a correlation heatmap
 - Normalized features and performed train-test split
 
 ---
@@ -44,7 +44,7 @@ This project predicts passenger survival on the Titanic using a Logistic Regress
 
 ## 📈 Evaluation Metrics
 
-### ✅ Accuracy: `100%`  
+### ✅ Accuracy: `100%`
 Model perfectly classified all 84 test samples.
 
 ### 📊 Confusion Matrix
@@ -54,10 +54,10 @@ Model perfectly classified all 84 test samples.
 ```
 
 ### 🧾 Classification Report
-All metrics (precision, recall, F1-score) were 1.00 for both classes.
+All metrics (precision, recall, F1-score) were **1.00** for both classes.
 
 ### 🔁 Cross-Validation
-- Scores: [1.0, 1.0, 1.0, 1.0, 1.0]  
+- Scores: [1.0, 1.0, 1.0, 1.0, 1.0]
 - **Mean CV Accuracy**: `1.0`
 
 ---
@@ -67,7 +67,7 @@ All metrics (precision, recall, F1-score) were 1.00 for both classes.
 - Confusion matrix plot
 - Correlation heatmap for feature analysis
 - Classification report
-- Sample prediction: `Passenger did not survive.`
+- Sample prediction output
 
 ### 📊 Correlation Heatmap
 This heatmap visualizes the correlation between input features and the target variable (Survived).
@@ -81,15 +81,14 @@ Notably:
 ---
 
 ## 📚 Key Learnings
-- Applied end-to-end supervised classification
-- Handled categorical encoding and missing values
-- Used logistic regression for binary classification
-- Understood evaluation using confusion matrix and CV
+- Applied end-to-end supervised classification pipeline
+- Categorical encoding and handling missing values
+- Logistic regression for binary classification
+- Evaluation using confusion matrix and cross-validation
 
 ---
 
 ## 📂 File Structure
-
 ```
 ├── Titanic_Survived__Prediction.ipynb  # Main notebook
 ├── titanic.csv.xlsx                    # Dataset file
